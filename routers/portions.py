@@ -10,8 +10,8 @@ async def root():
   return {"message": "Data is imported"}
 
 
-@router.get('/get-food-data/')
-async def get_food(food: str = Body(min_length=1)):
+@router.get('/get-food-data/{food}')
+async def get_food(food):
   food_data = await portions.get_food_data(food)
 
   if not food_data is None:
