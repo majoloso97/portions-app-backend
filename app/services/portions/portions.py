@@ -1,5 +1,5 @@
-from models.Portion import Portion
-from scrapper.Scrapper import Scrapper
+from app.core.schemas.portions import Portion
+from app.services.scrapper.scrapper import Scrapper
 
 async def update_portions_data():
   await Portion.delete_all()

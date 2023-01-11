@@ -1,6 +1,26 @@
-__pycache__
-.ipynb_checkpoints
-*.ipynb
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Environments
 .env
-*.DS_Store
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter notebook
+/*.ipynb
+*.ipynb_checkpoints
+
+#DS_store
+*.DS_store
 .DS_Store
+
+# VSCode
+.vscode
+
+#Storage files from local development
+/local
+/dump

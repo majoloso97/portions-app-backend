@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  portions-app:
+    image: portions-app
+    container_name: portions-app
+    environment:
+      - MONGODB_CONNECTIONSTRING=${MONGODB_CONNECTIONSTRING}
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./app:/code/app
+    ports:
+      - "80:80"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:5.0
+    container_name: portions-mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME:admin
+      - MONGO_INITDB_ROOT_PASSWORD:dev
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - ./local/db:/data/db

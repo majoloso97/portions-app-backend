@@ -1,7 +1,7 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 from requests import request
-from scrapper.PortionsStringParser import PortionString
+from app.services.scrapper.portionStringParser import PortionString
 
 class Scrapper:
   def __init__(

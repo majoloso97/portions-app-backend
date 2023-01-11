@@ -1,7 +1,7 @@
-from processing import portions
-from fastapi import APIRouter, Body
+from app.services.portions import portions
+from fastapi import APIRouter
 
-router = APIRouter(prefix='/portions')
+router = APIRouter(prefix='/api/v1/portions')
 
 @router.get('/load_portions/')
 async def root():

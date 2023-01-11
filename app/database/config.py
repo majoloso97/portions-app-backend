@@ -1,7 +1,7 @@
 from beanie import init_beanie
 import motor.motor_asyncio
-from config import settings
-from models.Portion import Portion
+from app.config import settings
+from app.core.schemas.portions import Portion
 
 async def initiate_database():
   # Crete Motor client
